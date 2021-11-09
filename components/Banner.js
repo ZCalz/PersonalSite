@@ -25,7 +25,7 @@ function Banner() {
                         </a>
                         <img
                             className="mt-6 rounded-lg shadow-xl"
-                            src="https://cdn.pixabay.com/photo/2021/10/27/19/09/cat-6748193_960_720.jpg"
+                            src="/Profile.JPG"
                             alt="Woman workcationing on the beach"
                         />
                         <div className="flex justify-center my-6 space-x-2">
