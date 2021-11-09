@@ -21,6 +21,10 @@ function About({aboutRef, scrollFunc}) {
                             I love exploring how technology integrate with eachother and getting things to working condition.
                             It is the joy of bettering my skills that keeps me going.
                         </p>
+                        <h1 className='font-bold'>My Github:</h1>
+                        <p className="text-sm font-normal hover:text-red-500">
+                            <a href="https://github.com/DuhCompuder">Github.com/DuhCompuder</a>
+                        </p>
 
                     {/* stats */}
             

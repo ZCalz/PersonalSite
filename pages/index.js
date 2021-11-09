@@ -57,7 +57,7 @@ function handleClickScroll(reference) {
           </button>
       </div> */}
     
-      <div className="px-10 w-auto h-screen">
+      <div ref={homeRef} className="px-10 w-auto h-screen">
         <Banner />
         <About aboutRef={aboutRef} scrollFunc={handleClickScroll}/>
         <Contact contactRef={contactRef} scrollFunc={handleClickScroll}/>
@@ -75,6 +75,28 @@ function handleClickScroll(reference) {
 
         <div className="absolute left-0 right-0">
           <InfoFeedModule />
+
+          <div className="opacity-0  
+                    transition duration-100 transform hover:scale-110
+                    flex"
+                  // onClick={() => toggleOpen(!stateProject)}> cursor-pointer
+                  >
+              <img
+                  className="rounded-lg shadow-xl h-48 sm:w-full object-cover object-top"
+                  src='/Website.png'
+                  alt="Chef Book, and other project I made"
+              />
+              <button className=""> 
+                CHECK OUT MY PROJECTS
+              </button>
+                     
+            </div>
+
+            <div className="hover:bg-indigo-500 hover:scale-110 p-4 rounded-2xl absolute bottom-28 right-10 h-auto w-auto bg-white shadow-2xl ">
+              <button onClick={() => setStateProject(!stateProject)} className="px-4 font-bold text-gray-700 hover:text-white">Check out these projects I am working on!</button>
+            </div>
+
+
         </div>
         
       </div>
@@ -88,11 +110,14 @@ function handleClickScroll(reference) {
           </button>
          
         </div>
+       
 
       </div>
       <div className="fixed top-0 right-0">
         <Header homeRef={homeRef} aboutRef={aboutRef} contactRef={contactRef} scroll={handleClickScroll} stateProject={stateProject} setStateProject={setStateProject}/>
       </div>
+
+  
      
     </div>
   )
