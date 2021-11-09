@@ -13,8 +13,16 @@ module.exports = {
     extend: {
       animation: {
         blob: "blob 7s infinite",
+        fade: 'fadeOut 5s ease-in-out',
       },
+      // https://stackoverflow.com/questions/68306441/fade-transition-tailwind-class-to-something-else-over-certain-amount-of-time
       keyframes: {
+        fade: theme => ({
+          fadeOut: {
+            '0%': { backgroundColor: theme('colors.red.300') },
+            '100%': { backgroundColor: theme('colors.transparent') },
+          },
+        }),
         blob: {
           "0%": {
             transform: "translate(0px, 0px) scale(1)",

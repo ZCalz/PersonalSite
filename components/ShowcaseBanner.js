@@ -5,7 +5,7 @@ function ShowcaseBanner() {
         item1: {
             source: '/Website.png',
             href: 'https://stupefied-elion-1bf6f3.netlify.app/',
-            click: 'Click to check it out',
+            click: 'Click to check out',
             info: 'A website I made with Next.js hosted on Netlify'
         },
         item2: {

@@ -5,22 +5,44 @@ import {
   ViewListIcon,
   XIcon
 } from "@heroicons/react/outline"
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import InfoFeedModule from '../components/InfoFeedModule'
 import ShowcaseBanner from '../components/ShowcaseBanner'
 import MotionBackgroundMenu from '../components/MotionBackgroundMenu'
 import Header from '../components/Header'
+import About from '../components/About'
+import Contact from '../components/Contact'
 
 
 export default function Home() {
   const [stateProject, setStateProject] = useState(false)
+  const homeRef = useRef()
+  const aboutRef = useRef()
+  const contactRef = useRef()
+  // Not excactly how its done so needs more research
+  // const allRef = useEffect({
+  //   aboutRef:aboutRef,
+  //   contactRef: contactRef
+  // },[])
 
   function toggleOpen(bool) {
     setStateProject(bool)
   }
-  console.log(stateProject)
+  // https://robinvdvleuten.nl/blog/scroll-a-react-component-into-view/
+  //  implement scroll in html, vanilla js and react functional component
+  function scroll(yPos) {
+    //Scrolling the document to position "250" 
+    //horizontally and "110" vertically
+    console.log("yPos: ",yPos)
+    console.log(aboutRef)
+    window.scrollTo(0, yPos);
+
+}
+function handleClickScroll(reference) {
+  reference.current.scrollIntoView({ behavior: 'smooth'})
+}
   return (
-    <div className="relative min-h-full flex justify-center h-auto overflow-x-hidden overflow-y-hidden">
+    <div className="relative min-h-full flex justify-center h-auto overflow-x-hidden overflow-y-auto scrollbar-hide">
       <Head>
         <title>Portfolio App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -37,13 +59,13 @@ export default function Home() {
     
       <div className="px-10 w-auto h-screen">
         <Banner />
+        <About aboutRef={aboutRef} scrollFunc={handleClickScroll}/>
+        <Contact contactRef={contactRef} scrollFunc={handleClickScroll}/>
       </div>
       {/* <Banner /> */}
 
       {/* Feed */}
-      <div className="absolute top-0 right-0">
-        <Header stateProject={stateProject} setStateProject={setStateProject}/>
-      </div>
+      
       <div className="relative p-10 text-2xl font-bold w-3/4 max-w-screen-md top-14">
         
         <div className="absolute lg:left-0 lg:right-0">
@@ -57,7 +79,7 @@ export default function Home() {
         
       </div>
       
-      <div className={`fixed inset-x-0 bottom-16 py-4 h-96 bg-gray-400 bg-opacity-10 ${stateProject? '': 'hidden'}`} >
+      <div className={`fixed inset-x-0 bottom-16 py-4 h-96 bg-gray-400 bg-opacity-10 fadeOut 5s ease-in-out ${stateProject? '': 'hidden'}`} >
         <ShowcaseBanner />
         <div className="absolute h-11 w-11 top-6 right-6 opacity-30">
           <button className="hover:scale-125" onClick={() => toggleOpen(!stateProject)}> 
@@ -67,6 +89,9 @@ export default function Home() {
          
         </div>
 
+      </div>
+      <div className="fixed top-0 right-0">
+        <Header homeRef={homeRef} aboutRef={aboutRef} contactRef={contactRef} scroll={handleClickScroll} stateProject={stateProject} setStateProject={setStateProject}/>
       </div>
      
     </div>
