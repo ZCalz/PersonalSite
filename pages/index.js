@@ -42,7 +42,7 @@ function handleClickScroll(reference) {
   reference.current.scrollIntoView({ behavior: 'smooth'})
 }
   return (
-    <div className="relative min-h-full flex justify-center h-auto overflow-x-hidden overflow-y-auto scrollbar-hide">
+    <div className="relative min-h-full flex sm:flex-row flex-col justify-center h-auto overflow-x-hidden overflow-y-auto scrollbar-hide">
       <Head>
         <title>Portfolio App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -68,7 +68,7 @@ function handleClickScroll(reference) {
       
       <div className="relative p-10 text-2xl font-bold w-3/4 max-w-screen-md top-14">
         
-        <div className="absolute lg:left-0 lg:right-0">
+        <div className="sm:absolute relative lg:left-0 lg:right-0 md:visible invisible">
           <MotionBackgroundMenu />
         </div>
 
