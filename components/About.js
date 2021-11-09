@@ -10,9 +10,9 @@ function About({aboutRef, scrollFunc}) {
                         <span className="text-2xl font-extrabold">About</span>
                     </div>
             
-                    <h1 className='font-bold'>Quick Bio:</h1>
+                    <h1 className='font-bold'>Quick Bio: </h1>
                         <p className="text-sm font-normal">
-                            Began journey in development with getting small gadgets that require installation of Node.js.
+                            My name is Calvin Sze. I began my journey in development with getting small gadgets that require installation of Node.js.
                             I would run into bugs and errors getting things to work. This drove me to search for information
                             from getting small hobby projects working tp bigger projects.
                         </p>
