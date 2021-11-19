@@ -4,7 +4,7 @@ function Skill({skillVisibility}) {
             <div className="relative bg-gray-400 h-64 w-full rounded-lg overflow-hidden hover:h-full">
                 <h1 className="p-6 flex items-center justify-center align-middle font-semibold text-white text-center">
                     Node.js, React, Next.js, Javascript, HTML, CSS, Express.js, Mocha, Chai,
-                    NPM, Git, Github, Yarn, Tailwind, Hardhat, Solidity, MongoDB, C++, Python, Alexa SDK, Figma, Adobe XD, Photoshop,
+                    NPM, Git, Github, Yarn, Tailwind, Hardhat, Solidity, MongoDB, C++, Python, Alexa SDK, Linux Centos, Linux Ubuntu, VirtualBox, VMWare ESXI, Raspberry pi, Arduino, Figma, Adobe XD, Photoshop,
                     Autodesk Inventor, Autodesk Revit, Autodesk AutoCad, Microsoft Office Suite, 
                     Presentation, Collaboration, Research, Data Analysis, Product Design, Writing,
                 Communication, Self-motivated, Leadership, Creativity, Adaptability
