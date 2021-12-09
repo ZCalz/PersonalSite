@@ -9,14 +9,16 @@ function ShowcaseBanner() {
             info: 'A website I made with Next.js hosted on Netlify'
         },
         item2: {
+            source: '/Marketplace.png',
+            href: 'https://opexmarket-17e48.web.app/',
+            click: 'Click to check out',
+            info: 'An NFT marketplace I made hosted on Firebase Cloud'
+        },
+        item3: {
             source: '/Placeholdercard.png',
             href: '#',
             click: 'Coming Soon...',
             info: ''
-        },
-        item3: {
-            source: '',
-            href: ''
         },
         item4: {
             source: '',
@@ -37,8 +39,8 @@ function ShowcaseBanner() {
                 
                 <ProjectCards source={cardInfo.item1.source} href={cardInfo.item1.href} click={cardInfo.item1.click} info={cardInfo.item1.info}/>
                 <ProjectCards source={cardInfo.item2.source} href={cardInfo.item2.href} click={cardInfo.item2.click} info={cardInfo.item2.info}/>
-                <ProjectCards source={cardInfo.item2.source} href={cardInfo.item2.href} click={cardInfo.item2.click} info={cardInfo.item2.info}/>
-                <ProjectCards source={cardInfo.item2.source} href={cardInfo.item2.href} click={cardInfo.item2.click} info={cardInfo.item2.info}/>
+                <ProjectCards source={cardInfo.item3.source} href={cardInfo.item3.href} click={cardInfo.item3.click} info={cardInfo.item3.info}/>
+                <ProjectCards source={cardInfo.item3.source} href={cardInfo.item3.href} click={cardInfo.item3.click} info={cardInfo.item3.info}/>
 
                 {/* <h1 className='cursor-pointer 
                         transition duration-100 transform hover:scale-125 
