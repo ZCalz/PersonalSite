@@ -10,9 +10,9 @@ function ShowcaseBanner() {
         },
         item2: {
             source: '/Marketplace.png',
-            href: 'https://opexmarket-17e48.web.app/',
+            href: 'https://marketplace-cb680.web.app/',
             click: 'Click to check out',
-            info: 'An NFT marketplace I made hosted on Firebase Cloud'
+            info: 'Ethereum NFT marketplace hosted on Firebase Cloud'
         },
         item3: {
             source: '/Placeholdercard.png',
