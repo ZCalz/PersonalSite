@@ -15,15 +15,18 @@ function ShowcaseBanner() {
             info: 'Ethereum NFT marketplace hosted on Firebase Cloud'
         },
         item3: {
+            source: '/EtherStakeFarm.png',
+            href: 'https://heuristic-kepler-b77ade.netlify.app/',
+            click: 'Working Progress...',
+            info: 'Token Farm. Still working on ethereum backend'
+        },
+        item4: {
             source: '/Placeholdercard.png',
             href: '#',
             click: 'Coming Soon...',
             info: ''
         },
-        item4: {
-            source: '',
-            href: ''
-        },
+       
     }
     return (
         <div className="flex relative h-full justify-center items-center">
@@ -40,7 +43,7 @@ function ShowcaseBanner() {
                 <ProjectCards source={cardInfo.item1.source} href={cardInfo.item1.href} click={cardInfo.item1.click} info={cardInfo.item1.info}/>
                 <ProjectCards source={cardInfo.item2.source} href={cardInfo.item2.href} click={cardInfo.item2.click} info={cardInfo.item2.info}/>
                 <ProjectCards source={cardInfo.item3.source} href={cardInfo.item3.href} click={cardInfo.item3.click} info={cardInfo.item3.info}/>
-                <ProjectCards source={cardInfo.item3.source} href={cardInfo.item3.href} click={cardInfo.item3.click} info={cardInfo.item3.info}/>
+                <ProjectCards source={cardInfo.item4.source} href={cardInfo.item4.href} click={cardInfo.item4.click} info={cardInfo.item4.info}/>
 
                 {/* <h1 className='cursor-pointer 
                         transition duration-100 transform hover:scale-125 
