@@ -25,7 +25,10 @@ function About({aboutRef, scrollFunc}) {
                         <p className="text-sm font-normal hover:text-red-500">
                             <a href="https://github.com/DuhCompuder">Github.com/DuhCompuder</a>
                         </p>
-
+                        <h1 className='font-bold'>Code for this site:</h1>
+                        <p className="text-sm font-normal hover:text-red-500">
+                            <a href="https://github.com/DuhCompuder/PersonalSite">{"https://github.com/DuhCompuder/PersonalSite"}</a>
+                        </p>
                     {/* stats */}
             
                 </div>      
